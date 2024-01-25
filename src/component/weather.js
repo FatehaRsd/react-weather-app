@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+
+import CurrentDate from "./currentDate";
 import "./weather.css";
 
 export default function Weather(props) {
@@ -9,6 +11,7 @@ export default function Weather(props) {
   let [humidity, setHumidity] = useState(null);
   let [wind, setWind] = useState(null);
   let [icon, setIcon] = useState(null);
+  //   let [date, setDate] = useState(null);
 
   function displayWeather(response) {
     setTemperature(response.data.temperature.current);
@@ -16,6 +19,7 @@ export default function Weather(props) {
     setHumidity(response.data.temperature.humidity);
     setIcon(response.data.condition.icon_url);
     setDesription(response.data.condition.description);
+    // setDate(new Date(response.data.date * 1000));
   }
 
   function handleSubmit(event) {
@@ -29,6 +33,7 @@ export default function Weather(props) {
   function updateCity(event) {
     setCity(event.target.value);
   }
+
   return (
     <div className="Weather">
       <div className="Header">
@@ -52,15 +57,31 @@ export default function Weather(props) {
       <div className="row mt-5">
         <div className="col-6">
           <h1 className="current-city">{city}</h1>
-          <p>
-            Wednesday, 17:52,{" "}
-            <span className="current-condition">{description}</span>
-          </p>
-          <p>
-            Humidity: <strong>{humidity}%</strong>, Wind Speed:{" "}
-            <strong>{wind}km/H</strong>
-          </p>
+          <div className="row">
+            <div className="col-6">
+              <p className="current-date">
+                <CurrentDate date={new Date()} />{" "}
+              </p>
+            </div>
+            <div className="col-6">
+              <p className="current-condition">{description}</p>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-6">
+              <p className="current-humidity">
+                Humidity : <strong>{humidity} %</strong>
+              </p>
+            </div>
+            <div className="col-6">
+              <p className="current-windspeed">
+                Wind Speed : <strong>{wind}km/H</strong>
+              </p>
+            </div>
+          </div>
         </div>
+
         <div className="col-6">
           <h1 className="current-temp">
             <img src={icon} alt="temp-icon"></img>
