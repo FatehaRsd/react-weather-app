@@ -71,12 +71,12 @@ export default function Weather(props) {
           <div className="row">
             <div className="col-6">
               <p className="current-humidity">
-                Humidity : <strong>{humidity} %</strong>
+                Humidity : <strong>{humidity}%</strong>
               </p>
             </div>
             <div className="col-6">
               <p className="current-windspeed">
-                Wind Speed : <strong>{wind}km/H</strong>
+                Wind : <strong>{wind}km/H</strong>
               </p>
             </div>
           </div>

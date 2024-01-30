@@ -6,28 +6,29 @@ export default function Footer() {
     <div className="footer">
       <footer>
         <p>
-          This project was coded by
+          This project was coded by{" "}
           <a
             href="https://github.com/FatehaRsd"
             target="_blank"
             rel="noreferrer"
           >
             FatehaRsd
-          </a>
-          and is
+          </a>{" "}
+          and is{" "}
           <a
             href="https://github.com/FatehaRsd/WeatherSearch"
             target="_blank"
             rel="noreferrer"
           >
             on GitHub
-          </a>
+          </a>{" "}
           and
           <a
             href="https://vanilla-weathersearch.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
+            {" "}
             hosted on Netlify
           </a>
         </p>
