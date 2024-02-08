@@ -1,4 +1,3 @@
-// currentDate component
 import React from "react";
 
 export default function CurrentDate(props) {

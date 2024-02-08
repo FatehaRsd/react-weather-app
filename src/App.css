@@ -12,3 +12,10 @@
   border-radius: 10px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
 }
+
+.footer {
+  /* border-top: 1px solid #e3e4e5; */
+  text-align: center;
+  padding-top: 15px;
+  color: #47555e;
+}
