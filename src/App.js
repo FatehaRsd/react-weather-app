@@ -30,7 +30,7 @@ function App() {
             </a>{" "}
             and
             <a
-              href="https://vanilla-weathersearch.netlify.app/"
+              href="https://bespoke-khapse-16142f.netlify.app/"
               target="_blank"
               rel="noreferrer"
             >
