@@ -122,10 +122,10 @@ function Weather(props) {
                       temperatureCelsius={weatherData.temperature}
                       unit={unit}
                     />
-                  </div>
-                  <div className="temperature-units">
-                    <button onClick={updateCelsiusUnit}>°C</button>|
-                    <button onClick={updateFahrUnit}>°F</button>
+                    <div className="temperature-units">
+                      <button onClick={updateCelsiusUnit}>°C</button>|
+                      <button onClick={updateFahrUnit}>°F</button>
+                    </div>
                   </div>
                 </div>
               </div>
