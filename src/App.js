@@ -22,7 +22,7 @@ function App() {
             </a>{" "}
             and is{" "}
             <a
-              href="https://github.com/FatehaRsd/WeatherSearch"
+              href="https://github.com/FatehaRsd/react-weather-app"
               target="_blank"
               rel="noreferrer"
             >

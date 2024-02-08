@@ -69,7 +69,7 @@ function Weather(props) {
                     required
                   ></input>
                 </div>
-                <div className="col-sm-3">
+                <div className="col-sm-3 ">
                   <input
                     className="search-button"
                     type="submit"
