@@ -5,9 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   font-family: "Comfortaa", sans-serif;
+  background-image: url("./image/Сurrent-weather-and-forecast-OpenWeatherMap.png");
   background-attachment: fixed;
+  background-size: cover;
 }
 
 code {

@@ -4,9 +4,9 @@
 }
 
 .search-form-input {
-  background-color: #f3f7fc;
+  background-color: rgba(227, 232, 228, 0.7);
   border: none;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgb(33, 33, 33);
   font-size: 16px;
   padding: 20px;
   width: 100%;
@@ -15,8 +15,8 @@
 
 .search-button {
   font-size: 16px;
-  background-color: #dfeaf7;
-  color: #34495e;
+  background-color: rgba(84, 65, 109, 0.6);
+  color: white;
   border: none;
   padding: 20px;
   border-radius: 5px;
@@ -25,29 +25,29 @@
 }
 
 .search-button:hover {
-  background-color: #6789ba;
+  background-color: rgba(43, 35, 90, 0.6);
   color: white;
 }
-.Weather h1 {
-  font-size: 24px;
-  font-weight: 100;
-  margin: 20px 0 0 0;
-  line-height: 29px;
+
+.location h1 {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 16px auto;
 }
 
-.Weather ul {
-  margin: 0;
-  padding: 0;
+.weather-description {
+  text-transform: capitalize;
 }
 
-.Weather li {
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 19px;
-  list-style: none;
+.location,
+.date-info,
+.weather-description,
+.weather-highlights {
+  color: #f3f7fc;
+  font-weight: 900;
 }
 
-.Weather .temperature {
+.temperature {
   font-weight: bold;
   color: rgb(33, 33, 33);
   font-size: 64px;
@@ -57,15 +57,16 @@
   margin-left: 10px;
 }
 
-.Weather canvas {
-  margin: 10px auto;
+.temperature-units {
+  color: rgb(33, 33, 33);
+  font-size: 18px;
 }
 
-.Weather .unit {
-  color: rgb(33, 33, 33);
-  font-size: 16px;
-  font-weight: 400;
-  position: relative;
-  line-height: 1;
-  top: -34px;
+.temperature-units button {
+  border: none;
+  background-color: transparent;
+}
+
+.temperature-units button:hover {
+  color: #f3f7fc;
 }

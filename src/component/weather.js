@@ -58,54 +58,82 @@ function Weather(props) {
         <div className="weather-info">
           <div className="search-engine">
             <form onSubmit={handleSubmit}>
-              <input
-                type="search"
-                placeholder="Enter your place ..."
-                onChange={updateCity}
-                autoFocus="on"
-                required
-              ></input>
-              <input
-                type="submit"
-                value="Search"
-                className="btn btn-primary w-100"
-              />
+              <div className="row mb-4">
+                <div className="col-sm-9">
+                  <input
+                    className="search-form-input"
+                    type="search"
+                    placeholder="Enter your place ..."
+                    onChange={updateCity}
+                    autoFocus="on"
+                    required
+                  ></input>
+                </div>
+                <div className="col-sm-3">
+                  <input
+                    className="search-button"
+                    type="submit"
+                    value="Search"
+                  />
+                </div>
+              </div>
             </form>
-            <div className="temperature-units">
-              <button onClick={updateCelsiusUnit}>C°</button>|
-              <button onClick={updateFahrUnit}>F°</button>
+          </div>
+
+          <div className="weather-display">
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="location">
+                  <h1>{weatherData.city}</h1>
+                </div>
+
+                <div className="date-info">
+                  <CurrentDate date={weatherData.date} />
+                </div>
+                <div className="weather-description">
+                  {weatherData.description}
+                </div>
+
+                <div className="weather-highlights">
+                  <div className="row mt-3">
+                    <div className="col-sm-6">
+                      <div className="highlights-header">
+                        Humidity : <strong>{weatherData.humidity} %</strong>
+                      </div>
+                    </div>
+                    <div className="col-sm-6">
+                      <div className="highlights-header">
+                        Wind : <strong>{weatherData.wind} km/h</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-sm-6">
+                <div className="temperature">
+                  <div className="row">
+                    <WeatherIcon
+                      iconId={weatherData.icon}
+                      width={100}
+                      height={100}
+                    />
+                    <WeatherTemperature
+                      temperatureCelsius={weatherData.temperature}
+                      unit={unit}
+                    />
+                  </div>
+                  <div className="temperature-units">
+                    <button onClick={updateCelsiusUnit}>°C</button>|
+                    <button onClick={updateFahrUnit}>°F</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <WeatherIcon iconId={weatherData.icon} width={100} height={100} />
-          <div className="weather-description">{weatherData.description}</div>
-          <div className="weather-highlights">
-            <div>
-              <div className="highlights-header">Humidity</div>
-              <div className="highlights-data">{weatherData.humidity} %</div>
-            </div>
-            <div>
-              <div className="highlights-header">Wind</div>
-              <div className="highlights-data">{weatherData.wind} km/h</div>
-            </div>
-          </div>
-          {/* <WeatherForecast coordinates={weatherData.coordinates} unit={unit} /> */}
         </div>
-        <div className="weather-display">
-          <div className="location">
-            <h1>{weatherData.city}</h1>
-          </div>
-          <div className="weather-display-footer">
-            <div className="date-info">
-              <CurrentDate date={weatherData.date} />
-            </div>
-            <div className="temperature">
-              <WeatherTemperature
-                temperatureCelsius={weatherData.temperature}
-                unit={unit}
-              />
-            </div>
-          </div>
-        </div>
+
+        {/* <WeatherForecast coordinates={weatherData.coordinates} unit={unit} /> */}
       </div>
     );
   } else {
