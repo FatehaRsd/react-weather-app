@@ -1,0 +1,22 @@
+#forecast {
+  background-color: rgba(33, 33, 33, 0.5);
+  color: #f3f7fc;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.WeatherForecast {
+  margin-top: 24px;
+}
+
+h2 {
+  color: #f3f7fc;
+}
+
+.row {
+  align-items: center;
+}
+
+.minTemp {
+  opacity: 0.7;
+}

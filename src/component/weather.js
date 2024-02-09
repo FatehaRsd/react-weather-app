@@ -3,6 +3,7 @@ import axios from "axios";
 import CurrentDate from "./currentDate.js";
 import WeatherIcon from "./weatherIcon.js";
 import WeatherTemperature from "./weatherTemp.js";
+import WeatherForecast from "./weatherForecast.js";
 import "./weather.css";
 
 function Weather(props) {
@@ -82,7 +83,27 @@ function Weather(props) {
 
           <div className="weather-display">
             <div className="row">
-              <div className="col-sm-6">
+              <div className="col-sm-4">
+                <div className="temperature">
+                  <div className="row">
+                    <WeatherIcon
+                      iconId={weatherData.icon}
+                      width={100}
+                      height={100}
+                    />
+                    <WeatherTemperature
+                      temperatureCelsius={weatherData.temperature}
+                      unit={unit}
+                    />
+                    <div className="temperature-units">
+                      <button onClick={updateCelsiusUnit}>°C</button>|
+                      <button onClick={updateFahrUnit}>°F</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-sm-8">
                 <div className="location">
                   <h1>{weatherData.city}</h1>
                 </div>
@@ -109,31 +130,11 @@ function Weather(props) {
                   </div>
                 </div>
               </div>
-
-              <div className="col-sm-6">
-                <div className="temperature">
-                  <div className="row">
-                    <WeatherIcon
-                      iconId={weatherData.icon}
-                      width={100}
-                      height={100}
-                    />
-                    <WeatherTemperature
-                      temperatureCelsius={weatherData.temperature}
-                      unit={unit}
-                    />
-                    <div className="temperature-units">
-                      <button onClick={updateCelsiusUnit}>°C</button>|
-                      <button onClick={updateFahrUnit}>°F</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
 
-        {/* <WeatherForecast coordinates={weatherData.coordinates} unit={unit} /> */}
+        <WeatherForecast coordinates={weatherData.coordinates} unit={unit} />
       </div>
     );
   } else {

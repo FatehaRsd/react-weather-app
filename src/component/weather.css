@@ -12,7 +12,7 @@
 .search-button {
   font-size: 16px;
   background-color: rgba(84, 65, 109, 0.6);
-  color: white;
+  color: #f3f7fc;
   border: none;
   padding: 20px;
   margin: 5px;
@@ -23,7 +23,7 @@
 
 .search-button:hover {
   background-color: rgba(43, 35, 90, 0.6);
-  color: white;
+  color: #f3f7fc;
 }
 
 .location h1 {
@@ -42,11 +42,12 @@
 .weather-highlights {
   color: #f3f7fc;
   font-weight: 900;
+  font-size: 18px;
 }
 
 .temperature {
   font-weight: bold;
-  color: rgb(33, 33, 33);
+  color: #f3f7fc;
   font-size: 64px;
   line-height: 64px;
   margin-left: 5px;
@@ -55,11 +56,12 @@
 }
 
 .temperature-units {
-  color: rgb(33, 33, 33);
+  color: #f3f7fc;
   font-size: 18px;
 }
 
 .temperature-units button {
+  color: #f3f7fc;
   border: none;
   background-color: transparent;
 }
